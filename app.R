@@ -8,7 +8,6 @@ library(plotly)
 library(shiny)
 library(shinydashboard)
 library(shinyWidgets)
-setwd("C:/Users/antho/Desktop/PASS CS Project")
 
 PASSCS_Grades <- read_excel("Grade_v2.xlsx", sheet = "PASSCS") %>%
   filter(!is.na(Grade)) %>%
@@ -200,5 +199,6 @@ server <- function(input, output, session) {
   
   
 }
+
 
 shinyApp(ui, server)
